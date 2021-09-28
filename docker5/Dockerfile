@@ -30,8 +30,8 @@ ENV ASPNETCORE_URLS=http://+:80
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["docker5/docker5.csproj", "docker5/"]
-RUN dotnet restore "docker5/MyApp.csproj"
+COPY ["docker5.csproj", "docker5/"]
+RUN dotnet restore "docker5/docker5.csproj"
 COPY . .
 WORKDIR "/src/docker5"
 RUN dotnet build "docker5.csproj" -c Release -o /app/build
