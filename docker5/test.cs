@@ -17,9 +17,6 @@ namespace docker5
         public int add()
         {
             int d;
-           
-
-
             return 5;
             return 5;
         }
